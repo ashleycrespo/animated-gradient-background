@@ -15,7 +15,7 @@ body {
     overflow: hidden;
     background: linear-gradient(45deg, #ff00ff, #ffff00, #00ff00);
     background-size: 300% 300%;
-    animation: gradientMove 3s infinite alternate ease-in-out;
+    animation: gradientMove 10s infinite alternate ease-in-out;
 }
 
 @keyframes gradientMove {
@@ -30,11 +30,11 @@ body {
 .card {
     position: relative;
     width:300px;
-    z-index: 10;
+    z-index: 9;
     text-align: center;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(76, 41, 41, 0.4);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
@@ -47,10 +47,29 @@ body {
     padding: 10px;
     text-align: center;
     z-index: 2;
+    /*animation: fadeIn 1.5s ease-in-out;*/
+}
+
+svg:hover{
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Icon Hover Effects */
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+        transform: scale(0.8);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+}
+
 .icon {
     display: flex;
     justify-content: center;
